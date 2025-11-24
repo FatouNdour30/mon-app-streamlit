@@ -25,7 +25,7 @@ import plotly.graph_objects as go
 import time
 import random
 from datetime import datetime
-from fpdf2 import FPDF
+from fpdf import FPDF
 # =====================================================
 # 1. CONFIGURATION & CONSTANTES
 # =====================================================
@@ -1995,7 +1995,7 @@ elif st.session_state.page == "exercices":
     # ==================================================
     
     try:
-        from fpdf2 import FPDF
+        from fpdf import FPDF
         FPDEF_AVAILABLE = True
     except ImportError:
         FPDEF_AVAILABLE = False
@@ -2119,7 +2119,7 @@ elif st.session_state.page == "exercices":
         """
         if not FPDEF_AVAILABLE: return None
         
-        pdf = FPDF2()
+        pdf = FPDF()
         pdf.add_page()
         
         # En-tête
